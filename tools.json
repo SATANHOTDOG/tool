@@ -1,0 +1,29 @@
+[
+  {
+    "id": "hola-search",
+    "title": "HOLA 家具搜尋系統",
+    "description": "快速檢索 HOLA 家具品項、規格與庫存狀態，提升現場與線上門市服務效率。",
+    "url": "https://satanhotdog.github.io/hola-furniture-search/",
+    "image": "images/hola-search.jpg",
+    "category": "商品查詢",
+    "tags": ["HOLA", "家具", "搜尋"]
+  },
+  {
+    "id": "hola-qa",
+    "title": "HOLA 門市問答助手",
+    "description": "彙整常見顧客 FAQ 與應對情境，提供標準化且迅速的解答支援。",
+    "url": "https://satanhotdog.github.io/hola-qa/",
+    "image": "images/hola-qa.jpg",
+    "category": "門市服務",
+    "tags": ["HOLA", "QA", "客服"]
+  },
+  {
+    "id": "machi-sofa",
+    "title": "麻吉沙發組合試算器",
+    "description": "模組化沙發尺寸與組合試算工具，精準計算空間配置與價格組合。",
+    "url": "https://satanhotdog.github.io/machi-sofa-calculator/",
+    "image": "images/machi-sofa.jpg",
+    "category": "尺寸試算",
+    "tags": ["沙發", "試算", "規格"]
+  }
+]
