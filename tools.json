@@ -2,7 +2,7 @@
   {
     "id": "hola-search",
     "title": "HOLA 家具圖片搜尋",
-    "description": "快速檢索 HOLA 家具圖片,以利業務銷售與顧客觀看圖片做參考。",
+    "description": "快速檢索 HOLA 家具圖片，以利業務銷售與顧客觀看圖片做參考。",
     "url": "https://satanhotdog.github.io/hola-furniture-search/",
     "image": "images/hola-search.jpg",
     "category": "商品查詢",
@@ -20,7 +20,7 @@
   {
     "id": "machi-sofa",
     "title": "麻吉沙發組合試算器",
-    "description": "模組化沙發尺寸與組合試算工具，精準計算沙發顏色與價格組合。",
+    "description": "麻吉沙發顏色與組合試算工具，精並提供SKU和品名等資訊，以利接單。",
     "url": "https://satanhotdog.github.io/machi-sofa-calculator/",
     "image": "images/machi-sofa.jpg",
     "category": "尺寸試算",
