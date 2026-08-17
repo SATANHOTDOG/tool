@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工作工具門戶 | SATANHOTDOG HUB</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --border-color: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-color: #38bdf8;
+      --accent-hover: #0284c7;
+      --tag-bg: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* 搜尋與過濾區 */
+    .controls {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      background-color: var(--card-bg);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    /* 網格卡片區 */
+    .grid-container {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+      border-color: var(--accent-color);
+    }
+
+    .card-img-wrapper {
+      width: 100%;
+      height: 180px;
+      background-color: #090d16;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .card-img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      background-color: var(--tag-bg);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--accent-color);
+      color: #0f172a;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .card-btn:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SATANHOTDOG WORKSPACE</h1>
+    <p>內部整合工作工具門戶</p>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="searchInput" class="search-input" placeholder="搜尋工具名稱、標籤或關鍵字...">
+  </div>
+
+  <main class="grid-container" id="toolsGrid">
+    <!-- 卡片將由 JS 動態渲染 -->
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SATANHOTDOG. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let toolsData = [];
+
+    // 初始化：載入 JSON 並渲染
+    async function initTools() {
+      try {
+        const response = await fetch('tools.json');
+        toolsData = await response.json();
+        renderCards(toolsData);
+      } catch (error) {
+        console.error('無法載入 tools.json:', error);
+        document.getElementById('toolsGrid').innerHTML = '<p style="color: #ef4444; grid-column: 1/-1; text-align: center;">無法載入工具資料，請確認 tools.json 是否存在。</p>';
+      }
+    }
+
+    // 渲染卡片 HTML
+    function renderCards(data) {
+      const grid = document.getElementById('toolsGrid');
+      if (data.length === 0) {
+        grid.innerHTML = '<p style="color: var(--text-muted); grid-column: 1/-1; text-align: center;">找不到符合條件的工具。</p>';
+        return;
+      }
+
+      grid.innerHTML = data.map(tool => `
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="${tool.image}" alt="${tool.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x340/1e293b/38bdf8?text=${encodeURIComponent(tool.title)}';">
+          </div>
+          <div class="card-body">
+            <span class="card-category">${tool.category}</span>
+            <h2 class="card-title">${tool.title}</h2>
+            <p class="card-desc">${tool.description}</p>
+            <div class="card-tags">
+              ${tool.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+            </div>
+            <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="card-btn">開啟工具 ↗</a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // 搜尋過濾功能
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const filtered = toolsData.filter(tool => 預測篩選(tool, query));
+      renderCards(filtered);
+    });
+
+    function 預測篩選(tool, query) {
+      if (!query) return true;
+      return (
+        tool.title.toLowerCase().includes(query) ||
+        tool.description.toLowerCase().includes(query) ||
+        tool.category.toLowerCase().includes(query) ||
+        tool.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    }
+
+    initTools();
+  </script>
+</body>
+</html>
