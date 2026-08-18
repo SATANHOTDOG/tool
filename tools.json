@@ -25,5 +25,14 @@
     "image": "https://lh3.googleusercontent.com/d/1qr2wBJGIUBzA1MpIbmbwDBn4VbZGQDUY",
     "category": "尺寸試算",
     "tags": ["沙發", "試算", "規格"]
+  },
+  {
+    "id": "hola-shipping",
+    "title": "HOLA家具運費查詢系統(2026版)",
+    "description": "即時查詢與試算 HOLA 家具配送運費，提供最新 2026 年運費標準與服務規範。",
+    "url": "https://satanhotdog.github.io/HOLA-Furniture-Shipping-Fee-Schedule2026/",
+    "image": "https://lh3.googleusercontent.com/d/1AdJn31loGXzJEjJn4691wZICj24cmKBV",
+    "category": "物流服務",
+    "tags": ["HOLA", "運費", "物流"]
   }
 ]
