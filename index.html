@@ -3,14 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- 適用於 iOS 主畫面外掛圖示 (3D 藍色工具箱) -->
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
-
-<!-- 適用於所有瀏覽器分頁圖示 (3D 藍色工具箱) -->
-<link rel="icon" href="data:image/png;base64,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" type="image/png">
-
 <title>工作工具門戶 | SATANHOTDOG HUB</title>
+
+<!-- 動態生成工具箱 Favicon 與 Apple Touch Icon 腳本 -->
+<script>
+(function() {
+  const canvas = document.createElement('canvas');
+  canvas.width = 180;
+  canvas.height = 180;
+  const ctx = canvas.getContext('2d');
+
+  // 背景圓角矩形 (深藍高質感)
+  ctx.fillStyle = '#0f172a';
+  ctx.beginPath();
+  ctx.roundRect(0, 0, 180, 180, 36);
+  ctx.fill();
+
+  // 工具箱把手
+  ctx.strokeStyle = '#94a3b8';
+  ctx.lineWidth = 10;
+  ctx.beginPath();
+  ctx.roundRect(65, 30, 50, 25, 8);
+  ctx.stroke();
+
+  // 工具箱主體
+  ctx.fillStyle = '#38bdf8';
+  ctx.beginPath();
+  ctx.roundRect(30, 50, 120, 95, 12);
+  ctx.fill();
+
+  // 工具箱蓋子分隔線
+  ctx.fillStyle = '#0284c7';
+  ctx.beginPath();
+  ctx.roundRect(25, 75, 130, 12, 4);
+  ctx.fill();
+
+  // 金屬扣環
+  ctx.fillStyle = '#f8fafc';
+  ctx.beginPath();
+  ctx.roundRect(80, 80, 20, 18, 4);
+  ctx.fill();
+
+  const iconUrl = canvas.toDataURL('image/png');
+
+  // 動態插入 link 標籤
+  const linkTouch = document.createElement('link');
+  linkTouch.rel = 'apple-touch-icon';
+  linkTouch.href = iconUrl;
+  document.head.appendChild(linkTouch);
+
+  const linkFavicon = document.createElement('link');
+  linkFavicon.rel = 'icon';
+  linkFavicon.type = 'image/png';
+  linkFavicon.href = iconUrl;
+  document.head.appendChild(linkFavicon);
+})();
+</script>
+
 <style>
 :root {
 --bg-color: #0f172a;
